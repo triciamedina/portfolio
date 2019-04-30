@@ -4,9 +4,10 @@
 
 body {
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     padding: 0px;
     margin: 0px;
+    background-color: white;
   }
 
 header {
@@ -23,22 +24,32 @@ section.banner {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #e8e8ee
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-.hero {
-    width: 100%;
-    height: 500px;
+div.hero {
+    height: 425px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 62px;
+    width: 280px;
 }
 
-.portrait {
-    background-color: white;
-    /* width: 270px; */
-    width: 90%;
+h1.hero {
+    margin: 0px 0px 34px 0px;
+    font-size: 1.67em;
+    line-height: 146.5%;
+}
+
+a.hero {
+    color: black;
+    text-decoration: none;
+}
+
+div#portrait {
+    background-color: #e8e8e8;
+    width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
@@ -50,18 +61,37 @@ section.project-section {
     height: 618px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #c4c4c4;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-.project-container {
-    width: 90%;
+div.project-container {
+    width: 100%;
     height: 493px;
-    background-color: white;
+    background-color: #c4c4c4;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    padding: 38px 34px 0px 34px;
+}
+
+h2.project-title {
+    font-size: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+p.project-description {
+    font-size: .87em;
+    line-height: 152.3%;
+    width: 195px;
+    margin: 0px 0px 32px 0px;
+}
+
+a.project-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    margin: 0px 0px 22px 0px;
 }
 
 section.about-section {
@@ -69,9 +99,29 @@ section.about-section {
     height: 575px;
     background-color: black;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h2.contact {
+    margin: 0px 0px 15px 0px;
+    font-size: 1.67em;
+    line-height: 146.5%;
+    color: white;
+}
+
+a.contact {
+    color: white;
+    text-decoration: none;
+}
+
+p.about {
+    width: 270px;
+    line-height: 152.3%;
+    margin-bottom: 70px;
 }
 
 footer {
@@ -82,5 +132,5 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
-    border-top: 1px solid white;
+    border-top: .5px solid white;
 }

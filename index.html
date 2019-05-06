@@ -2,37 +2,72 @@
 <html lang="en">
     <head>
         <title>Tricia Medina | Full-Stack Web Developer</title>
-        <meta name="description" content="">
+        <meta name="description" content="I’m Tricia, a full-stack web developer from the Bay Area. I enjoy solving problems and building human-centered experiences.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!-- Normalize -->
         <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+
+        <!-- Styles -->
         <link rel="stylesheet" href="main.css">
+
+        <!-- Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Source+Sans+Pro:300,400,600" rel="stylesheet">    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            Contact Info
+            <img src="images/t-logo.png" alt="">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/triciamedina/">
+                <i aria-hidden="true" class="fab fa-linkedin-in" title="LinkedIn"></i>
+            </a>
+            <a aria-label="Github" href="https://github.com/triciamedina">
+                <i aria-hidden="true" class="fab fa-github" title="Github"></i>
+            </a>
+            <a aria-label="Email" href="mailto:tricia.medina@gmail.com">
+                <i aria-hidden="true" class="fas fa-envelope" title="Email"></i>
+            </a>
         </header>
-        <section class="banner" role="banner">
-            <div class="hero">
-                <h1 class="hero">I’m Tricia, an aspiring full-stack web developer from the Bay Area. I enjoy solving problems and building human-centered experiences.</h1>
-                <a class="hero" href="#">Tell me more</a>
-            </div>
-            <div id="portrait">Portrait</div>
-        </section>
-        <section class="project-section">
-            <div class="project-container">
-                <h2 class="project-title">Blockchain Quiz</h2>
-                <p class="project-description">An interactive quiz app designed to serve as an introduction to blockchain technology. Built using HTML, CSS, JavaScript, and jQuery.</p>
-                <a class="project-link" href="https://triciamedina.github.io/quiz-app/" target="blank">View demo</a>
-                <a class="project-link" href="https://github.com/triciamedina/quiz-app" target="blank">View code</a>
-            </div>
-        </section>
-        <section class="about-section">
-            <p class="about">I am a social justice-minded nerd who is passionate about using technology to empower communities and build a more equitable economy. I am also an avid reader and science fiction enthusiast. When I’m not learning to code I enjoy learning to quilt and shoot film photography.</p>
-            <h2 class="contact">Let&rsquo;s talk</h1>
-            <a class="contact" href="mailto:tricia.medina@gmail.com">tricia.medina@gmail.com</a>
-        </section>
+        <main>
+            <section class="banner" role="banner">
+                <div class="hero">
+                    <h1 class="hero">I’m Tricia, a full-stack web developer from the Bay Area. I enjoy solving problems and building human-centered experiences.</h1>
+                    <div class="link-box">
+                        <a class="hero custom-underline" href="#about">Tell me more</a>
+                    </div>
+                </div>
+                <div id="portrait"><img src="images/tricia-portrait.jpg" alt="Tricia Medina"></div>
+            </section>
+            <section class="project-section">
+                <div class="project-container">
+                    <div class="padding">
+                        <h2 class="project-title">What Is Blockchain?</h2>
+                        <p>An interactive quiz app designed to serve as an introduction to blockchain technology. Built using <span class="tech-stack">HTML, CSS, JavaScript, and jQuery</span>.</p>
+                        <a href="https://triciamedina.github.io/quiz-app/">View demo <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/triciamedina/quiz-app">View code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <img class="project-image" src="images/blockchain-mockup-mobile.png" alt="Screenshot of blockchain quiz app.">
+                </div>
+            </section>
+            <section class="about-section" id="about">
+                <h2 class="contact">Let&rsquo;s talk</h2>
+                <div class="link-box contact">
+                    <a class="contact custom-underline" href="mailto:tricia.medina@gmail.com">tricia.medina@gmail.com</a>
+                </div>
+                <p class="about">I am a social justice-minded nerd who is passionate about using technology to empower communities and build a more equitable economy. Things that excite me include Web 3 and decentralized finance. I have an eye for good design and a an appreciation for elegant user experiences which I owe to my past life as a graphic design project manager. I am also an avid reader and science fiction enthusiast. When I’m not learning to code I enjoy learning to quilt and shoot film photography.</p>
+            </section>
+        </main>
         <footer role="contentinfo">
-            Contact Info
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/triciamedina/">
+                <i aria-hidden="true" class="fab fa-linkedin-in" title="LinkedIn"></i>
+            </a>
+            <a aria-label="Github" href="https://github.com/triciamedina">
+                <i aria-hidden="true" class="fab fa-github" title="Github"></i>
+            </a>
+            <a aria-label="Email" href="mailto:tricia.medina@gmail.com">
+                <i aria-hidden="true" class="fas fa-envelope" title="Email"></i>
+            </a>
         </footer>
     </body>
 </html>

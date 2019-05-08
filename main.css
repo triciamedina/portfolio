@@ -24,7 +24,7 @@ header {
 div.header-container {
     height: 120px;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -175,6 +175,12 @@ section.about-section {
     padding-right: 20px;
 }
 
+div.about-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
 h2.contact {
     margin: 0px 0px 18px 0px;
     padding-top: 80px;
@@ -320,12 +326,21 @@ a:hover, a:focus {
         padding-left: 60px;
         padding-right: 60px;
         display: flex;
-        flex-direction: row;
+        justify-content: center;
     }
+
+    div.about-container {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
 
     div.contact-container {
         margin-right: 80px;
-        align-self: flex-start;
     }
 
     p.about {
@@ -408,12 +423,8 @@ a:hover, a:focus {
         margin: 0px 40px 0px 0px;
     }
 
-    section.about-section {
-        justify-content: center;
-    }
-
     div.contact-container {
-        margin-right: 200px;
+        margin-right: 160px;
     }
 
     h2.contact {
@@ -444,6 +455,14 @@ a:hover, a:focus {
 
     div.hero {
         margin-right: 150px;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+
+    div.project-container {
+        padding: 30px 80px 30px 110px;
     }
 
 }

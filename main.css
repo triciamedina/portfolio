@@ -162,7 +162,6 @@ h2.project-title {
 img.project-image {
     height: auto;
     width: 100%;
-    max-width: 511px;
     vertical-align: bottom;
 }
 
@@ -318,8 +317,8 @@ a:hover, a:focus {
     }
 
     img.project-image {
-        max-height: 100%;
-        width: auto;
+        height: 252px;
+        width: 326px;
     }
 
     section.about-section {
@@ -457,12 +456,22 @@ a:hover, a:focus {
         margin-right: 150px;
     }
 
+    img.project-image {
+        height: 355px;
+        width: 460px;
+    }
+
 }
 
 @media screen and (min-width: 1300px) {
 
     div.project-container {
         padding: 30px 80px 30px 110px;
+    }
+
+    img.project-image {
+        height: 395px;
+        width: 512px;
     }
 
 }

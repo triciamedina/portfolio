@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
-  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -10,59 +14,112 @@ body {
     background-color: white;
   }
 
+h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+/* LINK STYLES */
+
 a {
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
+    position: relative;
+    color: #4000ff;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-}
-
-.header-container {
-    height: 120px;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-header img {
-    width: 46px;
-    height: 46px;
-    margin-right: auto;
+a:hover, a:focus {
+    color: #f9006c;
 }
 
 header a {
-    color: #4000ff;
-    margin-left: 30px;
+    margin-left: 15px;
     letter-spacing: .1em;
     text-transform: uppercase;
 }
 
+a.hero {
+    line-height: 152.3%;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+}
+
+.underline:hover::after,
+.underline:focus::after {
+    background-color: #f9006c;
+}
+
+.hero.underline::after {
+    background-color: #4000ff;
+}
+
+div.project-links .underline::after,
+.contact.underline::after {
+    background-color: white;
+}
+
+.about-section a {
+    color: white;
+    font-size: .87em;
+}
+
+footer a {
+    color: white;
+    margin: 0px 15px;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BANNER */
+
 section.banner {
     height: auto;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
 }
 
 div.hero {
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 150px;
+    margin-bottom: -40px;
     min-width: 280px;
 }
 
-h1.hero {
+h2.hero {
     margin: 0px 0px 34px 0px;
     font-size: 1.8em;
     font-weight: 600;
@@ -70,47 +127,29 @@ h1.hero {
     max-width: 640px;
 }
 
-a.hero {
-    color: #4000ff;
-    /* font-size: .87em; */
-    line-height: 152.3%;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
 div.link-box {
     position: relative;
     height: auto;
 }
 
-.custom-underline::after {
-    content: "";
-    position: absolute;
-    top: 24px;
-    left: 0px;
-    height: 1px;
-}
-
-.hero.custom-underline::after {
-    width: 95px;
-    background-color: #4000ff;
-}
-
-.contact.custom-underline::after {
-    width: 183px;
-    background-color: white;
-}
-
 div#portrait {
-    width: auto;
-    height: auto;
+    width: 440px;
+    height: 100%;
+    background-image: url('images/tricia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 0% left -70px;
+    border-radius: 50%;
+    position: relative;
 }
 
-div#portrait > img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+div#portrait::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
 }
+
+/* PROJECTS */
 
 section.project-section {
     width: 100%;
@@ -118,31 +157,31 @@ section.project-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 40px 20px;
+    margin: -10px 0;
 }
 
-div.project-container {
+.project-container {
     width: 100%;
     max-width: 1300px;
     height: auto;
+    margin: 10px 0px;
+    margin-bottom: 130px;
 }
 
 .blue {
     background-color: #0d023b;
 }
 
-.light-blue {
-    background-color: #4949ad;
-}
-
 .purple {
-    background-color: #8e2abe;
+    background-color: #2C156B;
 }
 
-div.project-text-container {
+.light-purple {
+    background-color: #6b00ff;
+}
+
+.project-text-container {
     display: flex;
     flex-direction: column;
     padding: 30px 25px 0px 25px;
@@ -150,7 +189,7 @@ div.project-text-container {
 
 h2.project-title {
     font-family: 'Roboto Mono', monospace;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 400;
     line-height: 130%;
     margin: 0px 0px 20px 0px;
@@ -158,10 +197,6 @@ h2.project-title {
 
 .light {
     color: white;
-}
-
-.dark {
-    color: black;
 }
 
 .project-container p {
@@ -173,20 +208,39 @@ h2.project-title {
     margin: 0px 0px 28px 0px;
 }
 
-.project-container a {
+.project-links {
+    margin-bottom: 48px;
+}
+
+.project-links a {
     color: white;
-    font-size: 1em;
-    margin: 0px 0px 22px 0px;
-    width: 150px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    line-height: 152.3%;
+    letter-spacing: .1em;
+    display: inline-block;
+    margin-right: 15px;
 }
 
-img.project-image {
+.project-image {
     height: auto;
-    width: 100%;
-    vertical-align: bottom;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: -100px;
 }
 
-section.about-section {
+.project-image.roots {
+    width: 50%;
+}
+
+/* ABOUT */
+
+.about-section {
     width: 100%;
     height: auto;
     background-color: #4000ff;
@@ -195,7 +249,7 @@ section.about-section {
     padding-right: 20px;
 }
 
-div.about-container {
+.about-container {
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -208,11 +262,6 @@ h2.contact {
     font-weight: 600;
     line-height: 146.5%;
     color: white;
-}
-
-.about-section a {
-    color: white;
-    font-size: .87em;
 }
 
 p.about {
@@ -237,21 +286,25 @@ footer {
     border-top: .5px solid white;
 }
 
-footer > a {
-    color: white;
-    margin: 0px 15px 0px 15px;
-}
-
-a.custom-underline:hover::after,
-a.custom-underline:focus::after {
-    background-color: #f9006c;
-}
-
-a:hover, a:focus {
-    color: #f9006c;
-}
-
 /* Responsive */
+
+@media screen and (max-height: 600px) {
+    header {
+        height: 80px;
+    }
+
+    h1 {
+        font-size: .8em;
+    }
+    
+    header a {
+        font-size: .8em;
+    }
+
+    div.hero {
+        margin-top: 100px;
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -283,22 +336,16 @@ a:hover, a:focus {
         font-size: 1em;
     }
 
-    div#portrait > img {
-        width: 224.5px;
-        height: 271px;
-        margin-top: 150px;
-    }
-
-    .custom-underline::after {
+    .underline::after {
         top: 26px;
         left: 0px;
     }
 
-    .hero.custom-underline::after {
+    .hero.underline::after {
         width: 110px;
     }
 
-    .contact.custom-underline::after {
+    .contact.underline::after {
         width: 210px;
     }
 
@@ -415,11 +462,14 @@ a:hover, a:focus {
         margin-right: 80px;
     }
 
-    div#portrait > img {
-        margin-top: 170px;
-        max-width: 275px;
-        height: auto;
-        width: 100%;
+    div#portrait {
+        width: 480px;
+        height: 100%;
+        background-image: url('images/tricia.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top 0% left -80px;
+        border-radius: 50%;
     }
 
     section.project-section {

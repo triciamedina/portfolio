@@ -20,90 +20,86 @@
     </head>
     <body>
         <header>
-            <div class="header-container">
-                <!-- <img src="images/t-logo.png" alt=""> -->
-                TRICIA MEDINA
-                <a aria-label="Work" href="https://www.linkedin.com/in/triciamedina/">
+            <h1>Tricia Medina</h1>
+            <nav>
+                <a aria-label="Work" href="#work">
                     Work
-                    <!-- <i aria-hidden="true" class="fab fa-linkedin-in" title="LinkedIn"></i> -->
                 </a>
-                <a aria-label="Contact" href="https://github.com/triciamedina">
+                <a aria-label="Contact" href="#about">
                     Contact
-                    <!-- <i aria-hidden="true" class="fab fa-github" title="Github"></i> -->
                 </a>
-                <!-- <a aria-label="Email" href="mailto:tricia.medina@gmail.com">
-                    <i aria-hidden="true" class="fas fa-envelope" title="Email"></i>
-                </a> -->
-            </div>
+            </nav>
         </header>
         <main role="main">
             <section class="banner" role="banner">
+                <div id="portrait"></div>
                 <div class="hero">
-                    <h1 class="hero">
-                        Hello, I’m Tricia a full-stack web developer from the Bay Area.
-                        </h1>
+                    <h2 class="hero">
+                        Hello, I’m Tricia, a full-stack web developer from the Bay Area.
+                    </h2>
                     <div class="link-box">
-                        <a class="hero custom-underline" href="#about">Get to know me</a>
+                        <a class="hero underline" href="#about">Get to know me</a>
                     </div>
                 </div>
-                <div id="portrait"><img src="images/tricia-portrait.jpg" alt="Tricia Medina"></div>
             </section>
-            <section class="project-section">
+            <section id="work" class="project-section">
                 <div class="project-container blue">
-                    <div class="project-text-container">
-                        <h2 class="project-title light">Belly</h2>
-                        <p class="light">
+                    <div class="project-text-container light">
+                        <h2 class="project-title">Belly</h2>
+                        <p>
                             Belly is a real-time bill splitting calculator for collaborating with others on 
-                            complicated restaurant bills. Built using React, JavaScript, HTML, CSS, Node, Express, and PostgreSQL.
+                            complicated restaurant bills. Built using WebSockets, React, JavaScript, HTML, CSS, Node, Express, and PostgreSQL.
                         </p>
-                        <a href="https://belly-app.now.sh/">
-                            View demo <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://github.com/triciamedina/belly-app">
-                            View code <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="project-links">
+                            <a class="underline" href="https://belly-app.now.sh/">
+                                Live 
+                            </a>
+                            <a class="underline" href="https://github.com/triciamedina/belly-app">
+                                GitHub
+                            </a>
+                        </div>
                     </div>
-                    <img class="project-image" src="images/blockchain-mockup-outline.png" alt="Screenshot of blockchain quiz app.">
+                    <img class="project-image" src="images/belly-screen-1@2x.png" alt="Screenshot of Belly app.">
                 </div>
-            </section>
-            <section class="project-section">
-                <div class="project-container blue">
-                    <div class="project-text-container">
-                        <h2 class="project-title light">Roots</h2>
-                        <p class="light">
+                <div class="project-container light-purple">
+                    <div class="project-text-container light">
+                        <h2 class="project-title">Roots</h2>
+                        <p>
                             Roots is a micro-donations app concept inspired by similar micro-finance 
                             models. Roots encourages you to give back to teachers in your community 
                             using the spare change from your rounded up purchases. Built using React, 
                             JavaScript, HTML, CSS, Node, Express, and PostgreSQL.
                         </p>
-                        <a href="https://roots-app.now.sh/">
-                            View demo <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://github.com/triciamedina/roots-app">
-                            View code <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="project-links">
+                            <a class="underline" href="https://roots-app.now.sh/">
+                                Live
+                            </a>
+                            <a class="underline" href="https://github.com/triciamedina/roots-app">
+                                GitHub
+                            </a>
+                        </div>
                     </div>
-                    <img class="project-image" src="images/blockchain-mockup-outline.png" alt="Screenshot of blockchain quiz app.">
+                    <img class="project-image roots" src="images/roots-screen@2x.png" alt="Screenshot of Roots app.">
                 </div>
-            </section>
-            <section class="project-section">
-                <div class="project-container blue">
-                    <div class="project-text-container">
-                        <h2 class="project-title light">Explore SOMA Pilipinas</h2>
-                        <p class="light">
+                <div class="project-container purple">
+                    <div class="project-text-container light">
+                        <h2 class="project-title">Explore SOMA Pilipinas</h2>
+                        <p>
                             An interactive map of the SOMA Pilipinas cultural district of 
                             San Francisco. Designed to represent the neighborhood as a dynamic and 
                             living cultural district with ongoing new generations of families and 
                             businessowners. Built using HTML, CSS, JavaScript, and jQuery.
                         </p>
-                        <a href="https://triciamedina.github.io/explore-soma-pilipinas/">
-                            View demo <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://github.com/triciamedina/explore-soma-pilipinas">
-                            View code <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="project-links">
+                            <a class="underline" href="https://triciamedina.github.io/explore-soma-pilipinas/">
+                                Live
+                            </a>
+                            <a class="underline" href="https://github.com/triciamedina/explore-soma-pilipinas">
+                                GitHub
+                            </a>
+                        </div>
                     </div>
-                    <img class="project-image" src="images/blockchain-mockup-outline.png" alt="Screenshot of blockchain quiz app.">
+                    <img class="project-image" src="images/explore-screen@2x.png" alt="Screenshot of blockchain quiz app.">
                 </div>
             </section>
             <section class="about-section" id="about">
@@ -113,7 +109,7 @@
                             Let&rsquo;s talk
                         </h2>
                         <div class="link-box contact">
-                            <a class="contact custom-underline" href="mailto:tricia.medina@gmail.com">
+                            <a class="contact underline" href="mailto:tricia.medina@gmail.com">
                                 tricia.medina@gmail.com
                             </a>
                         </div>

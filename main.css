@@ -34,11 +34,6 @@ a {
     color: #4000ff;
 }
 
-a:hover, 
-a:focus {
-    color: #f9006c;
-}
-
 header a {
     margin-left: 15px;
     letter-spacing: .1em;
@@ -51,27 +46,15 @@ a.hero {
     text-transform: uppercase;
 }
 
-.underline::after {
-    content: "";
-    position: absolute;
-    top: 24px;
-    left: 0px;
-    height: 1px;
-    width: 100%;
-}
-
-a.underline:hover:after,
-a.underline:focus::after {
-    background-color: #f9006c;
-}
-
-.hero.underline::after {
-    background-color: #4000ff;
-}
-
-div.project-links .underline::after,
-.contact.underline::after {
-    background-color: white;
+.project-links a {
+    color: white;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 152.3%;
+    letter-spacing: .1em;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .about-section a {
@@ -82,6 +65,37 @@ div.project-links .underline::after,
 footer a {
     color: white;
     margin: 0px 15px;
+}
+
+.hero.underline::after {
+    background-color: #4000ff;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    height: 1px;
+    width: 100%;
+}
+
+.project-links .underline::after,
+.contact.underline::after {
+    background-color: white;
+}
+
+a:hover, 
+a:focus {
+    color: #f9006c;
+}
+
+a.underline:hover:after,
+a.underline:focus:after,
+.project-links a.underline:hover::after,
+.project-links a.underline:focus::after,
+.hero.underline:hover::after  {
+    background-color: #f9006c;
 }
 
 /* HEADER */
@@ -213,18 +227,6 @@ h2.project-title {
     margin-bottom: 48px;
 }
 
-.project-links a {
-    color: white;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    font-weight: 300;
-    position: relative;
-    line-height: 152.3%;
-    letter-spacing: .1em;
-    display: inline-block;
-    margin-right: 15px;
-}
-
 .project-image {
     height: auto;
     width: 90%;
@@ -236,7 +238,7 @@ h2.project-title {
 }
 
 .project-image.roots {
-    width: 50%;
+    width: 100%;
 }
 
 /* ABOUT */
@@ -308,31 +310,30 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-
-    /* div.header-container {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    
-    div.hero {
-        margin-top: 150px;
-        margin-right: 50px;
-    }
-
-    h1.hero {
-        margin: 0px 0px 60px 0px;
-        font-size: 2em;
-    } */
-
-    /* .banner {
-        height: auto;
-        width: 100%;
-        padding-left: 60px;
-        padding-right: 60px;
-        display: flex;
+    .banner {
+        max-width: 1300px;
         flex-direction: row;
-    } */
-    
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+    }
+
+    div.hero {
+        margin: 0;
+        margin-top: -230px;
+        margin-left: -90px;
+    }
+
+    h2.hero {
+        max-width: 400px;
+    }
+
+    div#portrait {
+        width: 480px;
+        background-position: top 0% left -80px;
+    }
+
     a.hero {
         font-size: 1em;
     }
@@ -347,7 +348,8 @@ footer {
         flex-direction: row;
         align-items: center;
         min-height: 300px;
-        padding: 30px 40px 30px 40px;
+        padding: 45px 50px;
+        margin: 20px 0;
     }
 
     div.project-text-container {
@@ -366,10 +368,21 @@ footer {
         font-size: 1em;
     }
 
-    /* img.project-image {
-        height: 252px;
-        width: 326px;
-    } */
+    .project-links {
+        margin: 0;
+    }
+
+    .project-image {
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .project-image.roots {
+        width: 300px;
+        margin-bottom: -40px;
+    }
 
     section.about-section {
         padding-left: 60px;
@@ -387,7 +400,6 @@ footer {
         justify-content: center;
     }
     
-
     div.contact-container {
         margin-right: 80px;
     }
@@ -406,26 +418,14 @@ footer {
         height: 150px;
     }
     
-    footer > a {
-        margin: 0px 25px 0px 25px;
+    footer a {
+        margin: 0px 25px;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .banner {
-        max-width: 1300px;
-        flex-direction: row;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
         margin-bottom: 60px;
-    }
-
-    div.hero {
-        margin: 0;
-        margin-top: -230px;
-        margin-left: -90px;
     }
 
     h2.hero {
@@ -459,20 +459,17 @@ footer {
         max-width: 500px;
     }
 
-    .project-container a {
-        font-size: 1em;
-        margin: 0px 40px 0px 0px;
-    }
-
     .project-links {
         margin-bottom: 0px;
     }
 
+    .project-links a {
+        font-size: 1em;
+        margin: 0px 40px 0px 0px;
+    }
+
     .project-image {
         width: 400px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
     }
 
     .project-image.roots {

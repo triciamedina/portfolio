@@ -363,14 +363,13 @@ footer {
     }
 
     .project-container p {
-        font-size: 1em; 
-        width: auto;
+        font-size: 1em;
     }
 
-    img.project-image {
+    /* img.project-image {
         height: 252px;
         width: 326px;
-    }
+    } */
 
     section.about-section {
         padding-left: 60px;
@@ -441,6 +440,7 @@ footer {
 
     section.project-section {
         align-items: center;
+        margin: -20px 0;
     }
 
     h2.project-title {
@@ -448,16 +448,35 @@ footer {
     }
 
     div.project-container {
-        padding: 30px 80px 30px 80px;
+        height: 500px;
+        padding: 50px 100px;
+        margin: 20px 0;
+        justify-content: space-between;
     }
 
     .project-container p {
         font-size: 1.1em; 
+        max-width: 500px;
     }
 
     .project-container a {
-        font-size: 1.1em;
+        font-size: 1em;
         margin: 0px 40px 0px 0px;
+    }
+
+    .project-links {
+        margin-bottom: 0px;
+    }
+
+    .project-image {
+        width: 400px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .project-image.roots {
+        width: 450px;
     }
 
     div.contact-container {

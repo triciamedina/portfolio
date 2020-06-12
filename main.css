@@ -366,6 +366,7 @@ footer {
 
     .project-container p {
         font-size: 1em;
+        max-width: 400px;
     }
 
     .project-links {

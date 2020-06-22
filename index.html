@@ -13,6 +13,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <!-- Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400%7CSource+Sans+Pro:300,400,600" rel="stylesheet">    
@@ -33,7 +34,7 @@
         <main>
             <section class="banner" role="banner">
                 <div id="portrait"></div>
-                <div class="hero">
+                <div data-aos="fade-up" class="hero">
                     <h2 class="hero">
                         Hello, I’m Tricia, a full-stack web developer from the Bay Area.
                     </h2>
@@ -59,7 +60,7 @@
                             </a>
                         </div>
                     </div>
-                    <img class="project-image" src="images/belly-screen-1@2x.png" alt="Screenshot of Belly app.">
+                    <img data-aos="fade-up" class="project-image" src="images/belly-screen-1@2x.png" alt="Screenshot of Belly app.">
                 </div>
                 <div class="project-container light-purple">
                     <div class="project-text-container light">
@@ -79,7 +80,7 @@
                             </a>
                         </div>
                     </div>
-                    <img class="project-image roots" src="images/roots-screen-vertical@2x.png" alt="Screenshot of Roots app.">
+                    <img data-aos="fade-up" class="project-image roots" src="images/roots-screen-vertical@2x.png" alt="Screenshot of Roots app.">
                 </div>
                 <div class="project-container purple">
                     <div class="project-text-container light">
@@ -99,7 +100,7 @@
                             </a>
                         </div>
                     </div>
-                    <img class="project-image" src="images/explore-screen@2x.png" alt="Screenshot of Explore SOMA Pilipinas app.">
+                    <img data-aos="fade-up" class="project-image" src="images/explore-screen@2x.png" alt="Screenshot of Explore SOMA Pilipinas app.">
                 </div>
             </section>
             <section class="about-section" id="about">
@@ -137,5 +138,12 @@
                 <i aria-hidden="true" class="fas fa-envelope" title="Email"></i>
             </a>
         </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
     </body>
 </html>

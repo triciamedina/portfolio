@@ -19,7 +19,7 @@ h1 {
     font-weight: 400;
     letter-spacing: .1em;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 1.13em;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +29,7 @@ h1 {
 a {
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
     position: relative;
     color: #4000ff;
     transition: 0.5s ease;
@@ -37,8 +37,6 @@ a {
 
 header a {
     margin-left: 15px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
 }
 
 a.hero {
@@ -102,24 +100,118 @@ a.underline:focus:after,
 /* HEADER */
 
 header {
-    position: fixed;
-    top: 0;
-    transform: rotate(90deg);
-    transform-origin: bottom left;
+    position: relative;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 120px;
-    width: 100vh;
-    margin-top: -120px;
+    width: 100%;
     padding: 0 40px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAV */
+
+.navigation {
+    display: flex;
+    position: relative;
+}
+
+#navigation__checkbox {
+    display: none;
+}
+
+.navigation__hamburger-container {
+    cursor: pointer;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    width: 25px;
+    position: relative;
+}
+
+.navigation__hamburger,
+.navigation__hamburger:before,
+.navigation__hamburger:after {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #4000ff;
+    transition: all .7s ease;
+    margin: 0 auto;
+}
+
+.navigation__hamburger:before,
+.navigation__hamburger:after {
+    content: "";
+    position: absolute;
+}
+
+.navigation__hamburger:before {
+    top: 0px;
+    left: 0;
+}
+
+.navigation__hamburger:after {
+    bottom: 0;
+    left: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 65%);
     z-index: 2;
+    transition: all .5s ease;
+}
+
+nav a {
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navigation__checkbox:checked ~ nav {
+    height: 100vh;
+    line-height: normal;
+}
+
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger,
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger:before,
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger:after {
+    background-color: white;
+}
+
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger:before {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger:after {
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+#navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger {
+    width: 0;
 }
 
 /* BANNER */
 
 .banner {
-    height: 100vh;
+    height: calc(100vh - 120px);
     width: 100%;
     padding: 0 20px;
     padding-bottom: 40px;
@@ -429,10 +521,6 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
-    /* .banner {
-        
-    } */
-
     h2.hero {
         max-width: 600px;
         font-size: 2.67em;
@@ -506,5 +594,11 @@ footer {
 
     footer {
         height: 200px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    header {
+        padding: 0px;
     }
 }

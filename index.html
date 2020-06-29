@@ -21,15 +21,32 @@
     </head>
     <body>
         <header>
+            <div class="navigation">
+                <input id="navigation__checkbox" type="checkbox" />
+                <label for="navigation__checkbox" class="navigation__hamburger-container">
+                    <span class="navigation__hamburger"></span>
+                </label>
+                <nav>
+                    <a href="#work">
+                        Work
+                    </a>
+                    <a href="#about">
+                        About
+                    </a>
+                </nav>
+            </div>
             <h1>Tricia Medina</h1>
-            <nav>
-                <a href="#work">
-                    Work
+            <div>
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/triciamedina/" target="_blank">
+                    <i aria-hidden="true" class="fab fa-linkedin-in" title="LinkedIn"></i>
                 </a>
-                <a href="#about">
-                    Contact
+                <a aria-label="Github" href="https://github.com/triciamedina" target="_blank">
+                    <i aria-hidden="true" class="fab fa-github" title="Github"></i>
                 </a>
-            </nav>
+                <a aria-label="Email" href="mailto:tricia.medina@gmail.com" target="_blank">
+                    <i aria-hidden="true" class="fas fa-envelope" title="Email"></i>
+                </a>
+            </div>
         </header>
         <main>
             <section class="banner" role="banner">
@@ -105,7 +122,7 @@
             </section>
             <section class="about-section" id="about">
                 <div class="about-container">
-                    <div class="contact-container">
+                    <div data-aos="zoom-in-up" class="contact-container">
                         <h2 class="contact">
                             Let&rsquo;s talk
                         </h2>

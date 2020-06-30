@@ -29,7 +29,7 @@
                     tabindex=0 
                     for="navigation__checkbox" 
                     class="navigation__hamburger-container"
-                    onkeydown="toggleMenu(event)"
+                    onkeydown="toggleMenuKeyboard(event)"
                 >
                     <span class="navigation__hamburger"></span>
                 </label>
@@ -168,7 +168,7 @@
 				duration: 1000
 			});
 
-            function toggleMenu(event) {
+            function toggleMenuKeyboard(event) {
                 let isChecked = document.getElementById("navigation__checkbox").checked;
                 if (event.key === "Enter") {
                     document.getElementById("navigation__checkbox").checked = !isChecked;

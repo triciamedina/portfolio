@@ -19,7 +19,7 @@ body {
 a {
     text-decoration: none;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 300;
+    font-weight: 400;
     position: relative;
     color: #4000ff;
     transition: 0.5s ease;
@@ -168,6 +168,7 @@ nav {
 }
 
 nav a {
+    display: none;
     color: white;
     font-size: 4em;
     font-weight: 600;
@@ -178,6 +179,10 @@ nav a {
 #navigation__checkbox:checked ~ nav {
     height: 100vh;
     line-height: normal;
+}
+
+#navigation__checkbox:checked ~ nav a {
+    display: block;
 }
 
 #navigation__checkbox:checked + .navigation__hamburger-container .navigation__hamburger,
@@ -515,7 +520,7 @@ footer {
     .banner {
         padding-bottom: 120px;
     }
-    
+
     h1.hero {
         max-width: 600px;
         font-size: 2.67em;

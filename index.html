@@ -23,7 +23,14 @@
         <header>
             <div class="navigation">
                 <input id="navigation__checkbox" type="checkbox" />
-                <label for="navigation__checkbox" class="navigation__hamburger-container">
+                <label 
+                    role="button" 
+                    aria-label="Menu" 
+                    tabindex=0 
+                    for="navigation__checkbox" 
+                    class="navigation__hamburger-container"
+                    onkeydown="toggleMenu(event)"
+                >
                     <span class="navigation__hamburger"></span>
                 </label>
                 <nav>
@@ -160,6 +167,13 @@
 				easing: 'ease-out-back',
 				duration: 1000
 			});
+
+            function toggleMenu(event) {
+                let isChecked = document.getElementById("navigation__checkbox").checked;
+                if (event.key === "Enter") {
+                    document.getElementById("navigation__checkbox").checked = !isChecked;
+                }
+            }
 
             function closeMenu() {
                 document.getElementById("navigation__checkbox").checked = false;

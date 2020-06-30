@@ -54,6 +54,7 @@ a.hero {
 footer a {
     color: white;
     margin: 0px 15px;
+    font-size: 28px;
 }
 
 .hero.underline::after {
